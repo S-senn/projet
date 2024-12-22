@@ -1,0 +1,30 @@
+#version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./server
+    container_name: backend
+    restart: always
+    ports:
+      - "3001:3001"
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./client
+    container_name: frontend
+    restart: always
+    ports:
+      - "80:80"
+    environment:
+      REACT_APP_BACKEND_URL: http://backend:3001
+    networks:
+      - app-network
+    depends_on:
+      - backend
+
+networks:
+  app-network:
+    driver: bridge

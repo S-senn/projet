@@ -1,0 +1,136 @@
+/* Style global pour la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Couleur de fond douce */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+/* Conteneur global pour centrer le formulaire et la liste */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement */
+    justify-content: center;
+    padding: 20px;
+    gap: 20px; /* Espacement entre le formulaire et la liste */
+}
+
+/* Style du formulaire (UserForm) */
+.card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 350px; /* Réduit encore la largeur */
+    background-color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les champs dans le formulaire */
+}
+
+form input,
+form select,
+form button {
+    margin: 8px 0;
+    padding: 8px;
+    font-size: 0.9rem; /* Réduit la taille de la police */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%; /* Champs prennent toute la largeur du formulaire */
+}
+
+form button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #d32f2f;
+}
+
+/* Liste des utilisateurs */
+.user-list {
+    display: flex; /* Utilise flexbox pour l'affichage horizontal */
+    flex-wrap: wrap; /* Permet de passer à une nouvelle ligne si nécessaire */
+    gap: 16px; /* Ajoute un espace entre les cartes */
+    justify-content: center; /* Centre les cartes horizontalement */
+    padding: 16px;
+    max-width: 100%; /* Permet de prendre toute la largeur disponible */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style des cartes individuelles */
+.card {
+    flex: 1 1 calc(30% - 16px); /* Chaque carte occupe 30% de la largeur disponible */
+    max-width: 300px; /* Limite la largeur maximale de chaque carte */
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center; /* Centre le contenu des cartes */
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1rem; /* Réduit la taille du titre */
+    color: #333;
+}
+
+.card p {
+    margin: 4px 0;
+    font-size: 0.8rem; /* Réduit la taille du texte */
+    color: #555;
+}
+
+/* Boutons dans les cartes */
+.card button {
+    background-color: #f44336; /* Rouge pour Supprimer */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 4px; /* Espace entre les boutons */
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #d32f2f;
+}
+
+/* Style spécifique pour le bouton Modifier */
+.card button.modify {
+    background-color: #4CAF50; /* Vert pour Modifier */
+    color: white;
+}
+
+.card button.modify:hover {
+    background-color: #45a049;
+}
+
+/* Style des champs d'édition */
+.card input {
+    margin: 8px 0;
+    padding: 8px;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
